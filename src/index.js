@@ -5,7 +5,6 @@ import { LitElement, html, css } from "lit-element";
 export default class ComputeInput extends LitElement {
   static get properties() {
     return {
-      name: { type: String },
       text: { type: String },
       computeMode: { type: Boolean },
       computedValue: { type: Number }
@@ -14,7 +13,6 @@ export default class ComputeInput extends LitElement {
 
   constructor() {
     super();
-    this.name = "World";
     this.text = "";
     this.computeMode = false;
     this.computedValue = 0;
