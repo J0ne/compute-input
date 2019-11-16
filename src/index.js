@@ -1,0 +1,63 @@
+// Import the LitElement base class and html helper function
+import { LitElement, html, css } from "lit-element";
+
+// Extend the LitElement base class
+export default class ComputeInput extends LitElement {
+  static get properties() {
+    return {
+      name: { type: String },
+      text: { type: String },
+      computeMode: { type: Boolean },
+      computedValue: { type: Number }
+    };
+  }
+
+  constructor() {
+    super();
+    this.name = "World";
+    this.text = "";
+    this.computeMode = false;
+    this.computedValue = 0;
+  }
+
+  static get styles() {
+    return css`
+      .btn {
+        font-size: 200%;
+      }
+      input[type="text"] {
+        border: 2px solid black;
+      }
+    `;
+  }
+  log(e) {
+    var patt = /\d*['+'|'\-'|'\*'|'\^']\d*$/;
+    var str = e.target.value;
+    var res = patt.test(str);
+    console.log(e.target.value, res);
+    if (res) {
+      this.computeMode = true;
+      this.computedValue = eval(str);
+    } else {
+      this.computeMode = false;
+      this.text = e.target.value;
+    }
+  }
+
+  setValue() {
+    if (this.computeMode) {
+      this.text = this.computedValue;
+    }
+  }
+
+  render() {
+    return html`
+      <input
+        type="text"
+        .onchange=${() => this.setValue()}
+        .value=${this.text}
+        .onkeyup=${e => this.log(e)}
+      />
+    `;
+  }
+}
