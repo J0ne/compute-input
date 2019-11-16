@@ -1,11 +1,16 @@
 [![edit-in-webcomponents.dev](https://webcomponents.dev/assets/ext/edit_in_wcd.svg)](https://webcomponents.dev/edit/lL50hczqr2cwKepxxt4u)
-# LitElement Starter Kit
 
-### Starter kit result
+# Auto-compute input element
+
+### Input element that computes simple aritmethic operations.
 
 <wcd-show showcode>
-  <custom-element name="test"></custom-element>
+  <compute-input></compute-input>
 </wcd-show>
+
+### Disclaimer
+
+Just for testing and experimenting. Don't use in production.
 
 ### Links
 
