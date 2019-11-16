@@ -22,15 +22,12 @@ export default class ComputeInput extends LitElement {
 
   static get styles() {
     return css`
-      .btn {
-        font-size: 200%;
-      }
-      input[type="text"] {
-        border: 2px solid black;
+      input {
+        background-color: #fff;
       }
     `;
   }
-  log(e) {
+  computeValue(e) {
     var patt = /\d*['+'|'\-'|'\*'|'\^']\d*$/;
     var str = e.target.value;
     var res = patt.test(str);
@@ -56,7 +53,7 @@ export default class ComputeInput extends LitElement {
         type="text"
         .onchange=${() => this.setValue()}
         .value=${this.text}
-        .onkeyup=${e => this.log(e)}
+        .onkeyup=${e => this.computeValue(e)}
       />
     `;
   }
