@@ -56,3 +56,5 @@ export default class ComputeInput extends LitElement {
     `;
   }
 }
+
+window.customElements.define("compute-input", ComputeInput);
