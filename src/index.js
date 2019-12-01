@@ -26,10 +26,9 @@ export default class ComputeInput extends LitElement {
     `;
   }
   computeValue(e) {
-    var patt = /\d*['+'|'\-'|'\*'|'\^']\d*$/;
+    var patt = /\d*['+'|'\-'|'\*'|'\^']\d+$/;
     var str = e.target.value;
     var res = patt.test(str);
-    console.log(e.target.value, res);
     if (res) {
       this.computeMode = true;
       this.computedValue = eval(str);
@@ -56,5 +55,3 @@ export default class ComputeInput extends LitElement {
     `;
   }
 }
-
-window.customElements.define("compute-input", ComputeInput);
