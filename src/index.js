@@ -26,7 +26,7 @@ export default class ComputeInput extends LitElement {
     `;
   }
   computeValue(e) {
-    var patt = /\d*['+'|'\-'|'\*'|'\^']\d+$/;
+    var patt = /[\d]+['+'|'\-'|'\*'|'\^']\d+$/;
     var str = e.target.value;
     var res = patt.test(str);
     if (res) {
