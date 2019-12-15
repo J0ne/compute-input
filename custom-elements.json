@@ -1,0 +1,60 @@
+{
+ "_comment": "EXPERIMENTAL FORMAT -> https://github.com/webcomponents/custom-elements-json",
+ "tags": [
+  {
+   "name": "custom-element",
+   "description": "Description of the custom element.",
+   "attributes": [
+    {
+     "name": "attr1",
+     "type": "string",
+     "description": "Attribute One",
+     "defaultValue": "",
+     "required": false
+    }
+   ],
+   "properties": [
+    {
+     "name": "prop1",
+     "type": "string",
+     "attribute": "attr1",
+     "description": "Property One",
+     "defaultValue": "",
+     "required": false
+    }
+   ],
+   "events": [
+    {
+     "name": "event1",
+     "description": "Event One",
+     "type": "CustomEvent"
+    }
+   ],
+   "methods": [
+    {
+     "name": "method1",
+     "description": "Method One"
+    }
+   ],
+   "slots": [
+    {
+     "name": "slot1",
+     "description": "Slot One"
+    }
+   ],
+   "cssCustomProperties": [
+    {
+     "name": "--cssprop1",
+     "description": "CSS Custom Property One",
+     "type": "color"
+    }
+   ],
+   "cssShadowParts": [
+    {
+     "name": "part1",
+     "description": "CSS Shadow Part 1"
+    }
+   ]
+  }
+ ]
+}
