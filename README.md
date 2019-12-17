@@ -5,6 +5,7 @@
 ### Input element that computes simple aritmethic operations.
 
 Eg. write 42+42 and press enter (or tab, unfocus etc).
+Also decimals are supported, eg. 12.5\*12.43
 
 <wcd-show showcode>
   <compute-input></compute-input>

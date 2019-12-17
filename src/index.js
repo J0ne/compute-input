@@ -32,7 +32,7 @@ export default class ComputeInput extends LitElement {
     // compute if true
     if (isComputable) {
       this.computeMode = true;
-      this.computedValue = eval(str);
+      this.computedValue = eval(input);
     } else {
       this.computeMode = false;
       // if not, just use the input as is
