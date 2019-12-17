@@ -26,18 +26,19 @@ export default class ComputeInput extends LitElement {
     `;
   }
   computeValue(e) {
-    var patt = /[\d]+['+'|'\-'|'\*'|'\^']\d+$/;
-    var str = e.target.value;
-    var res = patt.test(str);
-    if (res) {
+    var pattern = /^[\d.]+['+'|'\-'|'\*'|'\^'][\d.]+$/;
+    var input = e.target.value;
+    var isComputable = pattern.test(input);
+    // compute if true
+    if (isComputable) {
       this.computeMode = true;
       this.computedValue = eval(str);
     } else {
       this.computeMode = false;
-      this.text = e.target.value;
+      // if not, just use the input as is
+      this.text = input;
     }
   }
-
   setValue() {
     if (this.computeMode) {
       this.text = this.computedValue;
